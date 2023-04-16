@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Website</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<header>
+        <div class="header">
+            <div>
+                <img class="brand" src="img/re.jpg" alt="brand">
+                <div class="kotak"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Profile</a></li>
+                    <li><a href="#">Archivement</a></li>
+                    <li><a href="#">Message Us</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+
+	<main>
+        <section id="ourprofile">
+            <h1 id="main-heading">Welcome To Website</h1>
+            <p>ini adalah website latihan pertama</p>
+			
+			
+		</section>
+
+		<section id="facilitation">
+			<h2>Our Facilitation</h2>
+            <div class="facilitation-content">
+            <div class="card">
+                <img src="img/b.jpg" alt="deskripsi gambar" class="lingkaran">
+                <p>Profesional Teacher</p>
+            </div>
+            <div class="card">
+                <img src="img/d.jpg" alt="deskripsi gambar" class="lingkaran">
+                <p>Sport Field</p>
+            </div>
+            <div class="card">
+                <img src="img/class.jpg" alt="deskripsi gambar" class="lingkaran" p> 
+                <p>Classroom</p>
+            </div>
+            </div>
+         </section>
+            
+
+
+
+
+         <section> 
+            <h2>Messege Us</h2>
+             <form name="message-form" onsubmit="return validateform()">
+                Nama: <input placeholder="Nama" type="text" name="full-name" />
+                Tanggal Lahir:
+                <input type="date" name="birth-date" />
+                <br />
+                jenis kelamin:
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki-Laki</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Perempuan</label>
+                <br />
+                pesan:
+                <textarea placeholder="pesan" name="Messages" ></textarea>
+                <input type="submit" value="submit"/>
+            </form>
+        </section>
+
+        <div class="form-output">
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin: <span id="sender-gender" ></span></p>
+            <p>Pesan: <span id="sender-messages"></span></p>
+        </div>
+
+    <script>
+        function validateform() {
+           var name = document.form ["message-form"] ["full-name"].value;
+           var date = document.forms ["message-form"] ["birth-date"].value;
+           var gender = document.forms ["message-form"] ["gender"].value;
+           var messages = document.forms ["message-form"] ["messages"].value;
+
+           if (name == "" || date == "" || gender == ""|| messages == "")
+           { alert ("input Tidak Boleh Kosong");
+           return false; //emang iyo iki return doang coba cek
+        }
+        
+           document.getElementById["sender-full-name"].innerText = name;
+           document.getElementById["sender-birth-date"].innerText = date;
+           document.getElementById["sender-gender"].innerText = gender;
+           document.getElementById["sender-messages"].innerText = messages;
+           return false;
+        }
+    </script>
+
+   
+
+    <script>
+        // let name = prompt("Silahkan masukkan nama Anda");
+        // let mainHeadingElement = document.getElementById("main-heading");
+        // mainHeadingElement.innerText = "Hi " + name + ",Welcome To Website";
+    </script>
+	</main>
+
+	<footer>
+		<p>&copy;alan bima mismin. All rights reserved.</p>
+	</footer>
+      
+</body>
+</html>
+
+
